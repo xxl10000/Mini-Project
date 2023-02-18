@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is a vote system </h1> 
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td>Festival Name</td>
+            <td>Vote Sum</td>
+            <td>Operate</td>
+        </tr>
+
+        {% for i in data %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.num}}</td>
+            <td><a href="/vote?id={{i.id}}">vote</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
